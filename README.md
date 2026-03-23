@@ -1,5 +1,28 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Kodia Web Design
+
+واجهة موقع احترافية مبنية باستخدام:
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Vercel Analytics
+- Vercel Speed Insights
+
+## تشغيل المشروع محليًا
+
+```bash
+npm install
+npm run dev
+
+Remove-Item -Recurse -Force .next
+npm run build
+npm run start
+
+
 ## Getting Started
 
 First, run the development server:
