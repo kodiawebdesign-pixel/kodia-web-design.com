@@ -12,6 +12,27 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Vercel Analytics
 - Vercel Speed Insights
 
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kodiawebdesign-pixel/kodia-web-design.com.git
+git push -u origin main                     
+
+اضافة التعديلات
+git status
+git add .
+git commit -m "Fix build TypeScript issues"
+git push origin main
+
+
+git add .
+git commit -m "update"
+git push
+
+
+
+
 ## تشغيل المشروع محليًا
 
 ```bash

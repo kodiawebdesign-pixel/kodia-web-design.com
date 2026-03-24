@@ -8,7 +8,11 @@ export const brand: Brand = {
   phoneE164: "+201207005495",
   email: "kodia.web.design@gmail.com",
   whatsappLink: "https://wa.me/201207005495",
-  url: "https://kodia-web-design-com.vercel.app",
+
+  // لو رابط النشر الحالي عندك مختلف، غيّره هنا فورًا
+  // لأن Open Graph و SEO بيعتمدوا على القيمة دي
+  url: "https://kodia-web-design-eg-com.vercel.app",
+
   logo: "/images/logo.png",
   serviceArea: "مصر وجميع الدول العربية (أونلاين)",
   trustSignals: [

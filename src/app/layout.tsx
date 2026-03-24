@@ -9,39 +9,53 @@ const cairo = Cairo({
   display: "swap",
 });
 
+const siteDescription =
+  "كوديا ويب ديزاين لتصميم المواقع والمتاجر الإلكترونية وصفحات الهبوط الحديثة بهوية بصرية قوية وسرعة عالية وتجربة استخدام احترافية.";
+
+const ogImageUrl = new URL("/opengraph-image", brand.url).toString();
+
 export const metadata: Metadata = {
   metadataBase: new URL(brand.url),
   title: {
     default: brand.name,
     template: `%s | ${brand.name}`,
   },
-  description:
-    "شريكك الرقمي الموثوق لتصميم المواقع والمتاجر وصفحات الهبوط في مصر والعالم العربي.",
+  description: siteDescription,
   applicationName: brand.name,
   keywords: [
     "Kodia Web Design",
     "تصميم مواقع",
     "تطوير مواقع",
+    "شركة تصميم مواقع",
     "متاجر إلكترونية",
     "Landing Pages",
-    "UI UX",
     "Web Design Egypt",
+    "UI UX",
+    "تصميم صفحات هبوط",
+    "تصميم متجر إلكتروني",
   ],
+  authors: [
+    {
+      name: brand.name,
+      url: brand.url,
+    },
+  ],
+  creator: brand.name,
+  publisher: brand.name,
   alternates: {
     canonical: "/",
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
     title: brand.name,
-    description:
-      "شريكك الرقمي الموثوق لتصميم المواقع والمتاجر وصفحات الهبوط.",
+    description: siteDescription,
     url: brand.url,
     siteName: brand.name,
     locale: "ar_EG",
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: `${brand.name} | ${brand.tagline}`,
@@ -51,20 +65,27 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: brand.name,
-    description:
-      "شريكك الرقمي الموثوق لتصميم المواقع والمتاجر وصفحات الهبوط.",
-    images: ["/opengraph-image"],
+    description: siteDescription,
+    images: [ogImageUrl],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#07070b",
   width: "device-width",
   initialScale: 1,
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -74,7 +95,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={cairo.className}>
-      <body>
+      <body className="min-h-screen overflow-x-hidden bg-[var(--kodia-bg)] text-[var(--kodia-text)] antialiased">
         {children}
         <FloatingWhatsAppButton />
       </body>

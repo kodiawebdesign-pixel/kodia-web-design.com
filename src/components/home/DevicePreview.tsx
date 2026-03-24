@@ -13,28 +13,28 @@ const featurePills = [
     label: "تصميم فاخر",
     icon: Sparkles,
     className:
-      "border-fuchsia-400/20 bg-fuchsia-500/12 text-fuchsia-100 shadow-[0_10px_30px_rgba(236,72,153,0.10)]",
+      "border-white/10 bg-[rgba(198,22,139,0.14)] text-fuchsia-100 shadow-[0_10px_30px_rgba(198,22,139,0.12)]",
   },
   {
     label: "واجهة واضحة",
     icon: LayoutGrid,
     className:
-      "border-sky-400/20 bg-sky-500/12 text-sky-100 shadow-[0_10px_30px_rgba(56,189,248,0.10)]",
+      "border-white/10 bg-[rgba(18,120,213,0.14)] text-sky-100 shadow-[0_10px_30px_rgba(18,120,213,0.12)]",
   },
   {
     label: "قابل للبيع",
     icon: ShoppingBag,
     className:
-      "border-orange-300/20 bg-orange-400/12 text-orange-100 shadow-[0_10px_30px_rgba(249,115,22,0.10)]",
+      "border-white/10 bg-[rgba(240,76,35,0.14)] text-orange-100 shadow-[0_10px_30px_rgba(240,76,35,0.12)]",
   },
 ];
 
 export default function DevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-xl">
-      <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-sky-500/20 via-fuchsia-500/10 to-orange-500/20 blur-3xl" />
-      <div className="absolute -right-8 top-10 h-28 w-28 rounded-full bg-sky-500/10 blur-3xl" />
-      <div className="absolute -left-8 bottom-8 h-28 w-28 rounded-full bg-fuchsia-500/10 blur-3xl" />
+      <div className="absolute inset-0 rounded-[40px] bg-[linear-gradient(135deg,rgba(18,120,213,0.18),rgba(83,85,239,0.12),rgba(198,22,139,0.12),rgba(240,76,35,0.14))] blur-3xl" />
+      <div className="absolute -right-8 top-10 h-28 w-28 rounded-full bg-[rgba(18,120,213,0.12)] blur-3xl" />
+      <div className="absolute -left-8 bottom-8 h-28 w-28 rounded-full bg-[rgba(198,22,139,0.10)] blur-3xl" />
 
       <div className="relative rounded-[34px] border border-white/10 bg-[#0b1017]/95 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
         <div className="rounded-[26px] border border-white/10 bg-[linear-gradient(180deg,#070a10_0%,#0b1018_100%)] p-3">
@@ -64,7 +64,7 @@ export default function DevicePreview() {
                   <div className="h-3 w-14 rounded-full bg-white/8" />
                 </div>
 
-                <div className="rounded-full border border-fuchsia-300/15 bg-gradient-to-l from-sky-500 via-indigo-500 to-fuchsia-500 px-4 py-2 text-[10px] font-semibold text-white shadow-[0_10px_25px_rgba(99,102,241,0.20)]">
+                <div className="kodia-brand-bg rounded-full px-4 py-2 text-[10px] font-semibold text-white shadow-[0_10px_25px_rgba(83,85,239,0.20)]">
                   CTA
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function DevicePreview() {
                   <div className="h-3.5 w-2/3 rounded-full bg-white/10" />
                 </div>
 
-                <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[linear-gradient(135deg,rgba(35,168,255,0.24),rgba(88,103,255,0.18),rgba(239,61,155,0.16),rgba(255,122,61,0.12))] p-4">
+                <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[linear-gradient(135deg,rgba(18,120,213,0.24),rgba(83,85,239,0.18),rgba(198,22,139,0.16),rgba(240,76,35,0.14))] p-4">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.10),transparent_36%)]" />
 
                   <div className="relative flex h-44 flex-col justify-between">
@@ -113,7 +113,7 @@ export default function DevicePreview() {
 
             <div className="space-y-3">
               <div className="rounded-[24px] border border-white/10 bg-white/[0.05] p-4 shadow-[0_16px_35px_rgba(0,0,0,0.16)] backdrop-blur-xl">
-                <div className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,122,61,0.28),rgba(239,61,155,0.18),rgba(88,103,255,0.16))] p-3">
+                <div className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(135deg,rgba(240,76,35,0.24),rgba(198,22,139,0.18),rgba(83,85,239,0.16))] p-3">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_30%)]" />
                   <div className="relative">
                     <div className="inline-flex rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[10px] text-white">
@@ -129,15 +129,15 @@ export default function DevicePreview() {
 
               <div className="rounded-[24px] border border-white/10 bg-white/[0.05] p-4 shadow-[0_16px_35px_rgba(0,0,0,0.16)] backdrop-blur-xl">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="rounded-[18px] border border-white/10 bg-sky-500/10 p-3">
-                    <div className="mb-3 inline-flex rounded-full bg-sky-500/15 p-2 text-sky-200">
+                  <div className="rounded-[18px] border border-white/10 bg-[rgba(18,120,213,0.10)] p-3">
+                    <div className="mb-3 inline-flex rounded-full bg-[rgba(18,120,213,0.15)] p-2 text-sky-200">
                       <BadgeCheck className="h-4 w-4" />
                     </div>
                     <div className="h-3 w-14 rounded-full bg-white/10" />
                   </div>
 
-                  <div className="rounded-[18px] border border-white/10 bg-fuchsia-500/10 p-3">
-                    <div className="mb-3 inline-flex rounded-full bg-fuchsia-500/15 p-2 text-fuchsia-200">
+                  <div className="rounded-[18px] border border-white/10 bg-[rgba(198,22,139,0.10)] p-3">
+                    <div className="mb-3 inline-flex rounded-full bg-[rgba(198,22,139,0.15)] p-2 text-fuchsia-200">
                       <Palette className="h-4 w-4" />
                     </div>
                     <div className="h-3 w-14 rounded-full bg-white/10" />

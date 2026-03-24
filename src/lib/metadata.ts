@@ -18,6 +18,9 @@ export function createPageMetadata({
   path = "/",
 }: MetadataInput): Metadata {
   const normalizedPath = normalizePath(path);
+  const pageUrl = new URL(normalizedPath, brand.url).toString();
+  const ogImageUrl = new URL("/opengraph-image", brand.url).toString();
+  const fullTitle = `${title} | ${brand.name}`;
 
   return {
     title,
@@ -26,26 +29,30 @@ export function createPageMetadata({
       canonical: normalizedPath,
     },
     openGraph: {
-      title: `${title} | ${brand.name}`,
+      title: fullTitle,
       description,
-      url: `${brand.url}${normalizedPath}`,
+      url: pageUrl,
       siteName: brand.name,
       locale: "ar_EG",
       type: "website",
       images: [
         {
-          url: "/opengraph-image",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${brand.name} | ${brand.tagline}`,
+          alt: `${title} | ${brand.name}`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${brand.name}`,
+      title: fullTitle,
       description,
-      images: ["/opengraph-image"],
+      images: [ogImageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
