@@ -42,9 +42,6 @@ export const metadata: Metadata = {
   ],
   creator: brand.name,
   publisher: brand.name,
-  alternates: {
-    canonical: "/",
-  },
   manifest: "/manifest.webmanifest",
   openGraph: {
     title: brand.name,
